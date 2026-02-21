@@ -9,6 +9,10 @@ dependencies = [
     "music21>=9.9.1",
     "numpy>=2.4.2",
     "pandas>=3.0.1",
-    "tensorflow>=2.20.0",
+    "pretty-midi>=0.2.11",
+    "scipy>=1.17.0",
+    "streamlit>=1.9.0",
     "torch>=2.10.0",
+    "torchaudio>=2.10.0",
+    "torchvision>=0.25.0",
 ]

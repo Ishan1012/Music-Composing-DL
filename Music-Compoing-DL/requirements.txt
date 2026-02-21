@@ -1,0 +1,8 @@
+streamlit
+torch
+torchvision
+torchaudio
+numpy
+scipy
+music21
+pretty_midi

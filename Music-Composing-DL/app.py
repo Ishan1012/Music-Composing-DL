@@ -139,7 +139,7 @@ temperature = st.sidebar.slider("Creativity (Temperature)", 0.5, 1.5, 1.0)
 seed_chords = [[73, 68, 61, 53]] * 8 
 
 if st.button("🎵 Generate New Music"):
-    model, device = load_model("weights.pth", num_notes=47)
+    model, device = load_model("./Music-Composing-DL/weights.pth", num_notes=47)
     
     with st.spinner("Writing the notes..."):
         generated_notes = generate_chorale(model, seed_chords, gen_length, device)

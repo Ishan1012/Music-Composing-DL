@@ -129,7 +129,7 @@ def generate_chorale(model, seed_chords, length, device="cpu"):
 
     return token_sequence.reshape(-1, 4)
 
-st.title("🎼 AI Bach Chorale Generator")
+st.title("AI Bach Chorale Generator")
 st.subheader("Generate music using a Conv1D-LSTM Model")
 
 st.sidebar.header("Generation Settings")
@@ -138,7 +138,7 @@ temperature = st.sidebar.slider("Creativity (Temperature)", 0.5, 1.5, 1.0)
 
 seed_chords = [[73, 68, 61, 53]] * 8 
 
-if st.button("🎵 Generate New Music"):
+if st.button("Generate New Music"):
     model, device = load_model("./Music-Composing-DL/weights.pth", num_notes=47)
     
     with st.spinner("Writing the notes..."):
@@ -173,11 +173,11 @@ if st.button("🎵 Generate New Music"):
         wav_buffer = io.BytesIO()
         wavfile.write(wav_buffer, 44100, audio_data.astype(np.float32))
         
-        st.write("### 🔊 Listen to Bach (Synthesized)")
+        st.write("### Listen to Bach (Synthesized)")
         st.audio(wav_buffer.getvalue(), format="audio/wav")
         
         st.download_button(
-            label="📥 Download Audio (.wav)",
+            label="Download Audio (.wav)",
             data=wav_buffer.getvalue(),
             file_name="bach_chorale.wav",
             mime="audio/wav"

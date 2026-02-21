@@ -1,0 +1,14 @@
+[project]
+name = "music-compoing-dl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.5.4",
+    "music21>=9.9.1",
+    "numpy>=2.4.2",
+    "pandas>=3.0.1",
+    "tensorflow>=2.20.0",
+    "torch>=2.10.0",
+]
